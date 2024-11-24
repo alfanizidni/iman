@@ -1,263 +1,91 @@
 {% include '__partials/header.html' %}
 
- <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
-  <section class="content-header">
+  <div class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Advanced Form</h1>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Advanced Form</li>
-          </ol>
-        </div>
-      </div>
-    </div><!-- /.container-fluid -->
-  </section>
-
-  <!-- Main content -->
-  <section class="content">
-    <div class="container-fluid">
-      <!-- SELECT2 EXAMPLE -->
-      <div class="card card-default">
-        <div class="card-header">
-          <h3 class="card-title">Select2 (Default Theme)</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        </div>
-
-          <!-- Main content -->
-          <section class="content">
+            <h1 class="m-0">Dashboard</h1>            
+            </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-12">
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">Biodata</h3>
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <form method="POST" action="{{ url_for('add_santri') }}">
-                                <!-- Section: Biodata Pribadi -->
-                                <h4 class="mt-4">Biodata Pribadi</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="nama_santri">Nama</label>
-                                            <input type="text" id="nama_santri" name="nama_santri" class="form-control" required>
-                                        </div>                     
-                                        <div class="form-group">
-                                            <label for="jenis_kelamin">Jenis Kelamin</label>
-                                            <select id="jenis_kelamin" name="jenis_kelamin" class="form-control custom-select">
-                                                <option selected disabled>Pilih</option>
-                                                <option>Laki-Laki</option>
-                                                <option>Perempuan</option>                    
-                                            </select>
-                                        </div>
-                                    </div>  
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="tempat_lahir">Tempat Lahir</label>
-                                            <input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control">
-                                        </div>                     
-                                        <div class="form-group">
-                                            <label>Tanggal Lahir</label>
-                                            <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="inputDescription">Alamat</label>
-                                            <textarea id="inputDescription" name="alamat" id="alamat" class="form-control" rows="1"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">                    
-                                        <div class="form-group">
-                                            <label>No Telpon</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                                </div>
-                                                <input type="number" class="form-control" id="no_telp" name="no_telp">
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div> 
-                                <!-- Section: Biodata Pendidikan -->
-                                <h4 class="mt-4">Biodata Pendidikan</h4>
-                                <div class="row">   
-                                  <div class="col-md-6">                                 
-                                    <div class="form-group">
-                                        <label for="nama_lembaga">Nama Lembaga</label>
-                                        <select id="nama_lembaga" name="nama_lembaga" class="form-control custom-select">
-                                          <option selected disabled>Pilih</option>
-                                          <option>SMA Nuris</option>
-                                          <option>MA Unggulan Nuris</option>  
-                                          <option>SMK Nuris</option>                   
-                                        </select>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                      <div class="form-group">
-                                        <label for="jurusan">Jurusan</label>
-                                        <select id="jurusan" name="jurusan" class="form-control custom-select">
-                                          <option selected disabled>Pilih</option>
-                                          <option>Ilmu Pengetahuan Alam (IPA)</option>
-                                          <option>Ilmu Pengetahuan Sosial (IPS)</option>
-                                          <option>Pendidikan Keagamaan (PK)</option>
-                                          <option>Teknik Komputer & Jaringan (TKJ)</option> 
-                                          <option>Teknik Sepeda Motor (TSM)</option> 
-                                          <option>Teknik Kendaraan Ringan (TKR)</option>                      
-                                        </select>
-                                      </div>
-                                    </div>  
-                                    <div class="col-md-6">  
-                                      <div class="form-group">
-                                        <label>Tahun Masuk</label>
-                                          <input type="date" id="tahun_masuk" name="tahun_masuk" class="form-control" />                                          
-                                      </div> 
-                                    </div>
-                                    <div class="col-md-6">  
-                                      <div class="form-group">
-                                        <label>Tahun Lulus</label>
-                                          <input type="date" id="tahun_lulus" name="tahun_lulus" class="form-control" />                                          
-                                      </div> 
-                                    </div>
-                                    <div class="col-md-12"> 
-                                      <div class="form-group">
-                                        <label for="perusahaan">Nama Perusahaan</label>
-                                        <input type="text" id="perusahaan" name="perusahaan" class="form-control">
-                                      </div>
-                                    </div> 
-                                    <div class="col-md-6"> 
-                                      <div class="form-group">
-                                        <label for="jabatan">Jabatan</label>
-                                        <input type="text" id="jabatan" name="jabatan" class="form-control">
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">  
-                                      <div class="form-group">
-                                        <label for="inputDescription">Alamat Perusahaan</label>
-                                        <textarea id="inputDescription" id="alamat_perusahaan" name="alamat_perusahaan" class="form-control" rows="2"></textarea>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">  
-                                      <div class="form-group">
-                                        <label for="nama_kampus">Nama Kampus</label>
-                                        <input type="text" id="nama_kampus" name="nama_kampus" class="form-control">
-                                      </div>  
-                                    </div>
-                                    <div class="col-md-6">                    
-                                        <!-- <div class="card-body"> -->
-                                          <div class="form-group">
-                                            <label for="jurusan">Jurusan/Fakultas</label>
-                                            <select id="jurusan_kampus" name="jurusan_kampus" class="form-control custom-select">
-                                              <option selected disabled>Pilih</option>
-                                              <option>Teknologi Informasi</option>
-                                              <option>FKIP</option>  
-                                              <option>FISIP</option>                   
-                                            </select>
-                                          </div>
-                                    </div> 
-                                    <div class="col-md-6"> 
-                                        <div class="form-group">
-                                          <label for="program_studi">Program Studi</label>
-                                          <select id="program_studi" name="program_studi" class="form-control custom-select">
-                                            <option selected disabled>Pilih</option>
-                                            <option>Teknik Informatika</option>
-                                            <option>Pendidikan IPA</option>
-                                            <option>Pendidikan BIOLOGI</option>
-                                            <option>Kimia</option> 
-                                            <option>Teknik Sipil</option> 
-                                            <option>Matematika</option>                      
-                                          </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6"> 
-                                        <div class="form-group">
-                                          <label for="organisasi_internal">Organisasi Internal</label>
-                                          <input type="text" id="organisasi_internal" name="organisasi_internal" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">   
-                                        <div class="form-group">
-                                          <label for="organisasi_eksternal">Organisasi Eksternal</label>
-                                          <input type="text" id="organisasi_eksternal" name="organisasi_eksternal" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">   
-                                        <div class="form-group">
-                                          <label for="nama_himpunan">Nama Himpunan</label>
-                                          <input type="text" id="nama_himpunan" name="nama_himpunan" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">    
-                                        <div class="form-group">
-                                          <label for="provinsi">Provinsi</label>
-                                          <select id="provinsi" name="provinsi" class="form-control custom-select">
-                                            <option selected disabled>Pilih</option>
-                                            <option>Jawa Timur</option>
-                                            <option>Jawa Barat</option>  
-                                            <option>Jawa Tengah</option>                   
-                                          </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">  
-                                        <div class="form-group">
-                                          <label for="kota">Kota</label>
-                                          <select id="kota" name="kota" class="form-control custom-select">
-                                            <option selected disabled>Pilih</option>
-                                            <option>Jember</option>
-                                            <option>Malang</option>  
-                                            <option>Surabaya</option>                   
-                                          </select>
-                                        </div> 
-                                      </div>
-                                      <div class="col-md-6">                     
-                                        <div class="form-group">
-                                          <label>Tahun Masuk</label>
-                                            <input type="date" id="tahun_masuk_kampus" name="tahun_masuk_kampus" class="form-control" />
-                                            <!-- <div class="input-group date" id="reservationdate2" data-target-input="nearest">
-                                                <input type="date" id="tahun_masuk" name="tahun_masuk" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div> -->
-                                        </div>   
-                                    </div>            
-                                  </div>
-                                </div>    
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Simpan Data" class="btn btn-success float-left">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Biodata Alumni</h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                      <thead>
+                      <tr>
+                        <th>Nama Santri</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Tempat Lahir</th>
+                        <th>Alamat</th>
+                        <th>Nomor Telepon</th>
+                        <!-- <th>Tahun Masuk</th>
+                        <th>Tahun Lulus</th> -->
+                      </tr>
+                      </thead>
+                      <tbody>
+                        {% for s in santri %}
+                          <tr>
+                            <td>{{ s.nama_santri }}</td>
+                            <td>{{ s.jenis_kelamin }}</td>
+                            <td>{{ s.tempat_lahir }}</td>
+                            <td>{{ s.alamat }}</td>
+                            <td>{{ s.no_telp }}</td>
+                            <!-- <td>{{ s.tahun_masuk }}</td>
+                            <td>{{ s.tahun_lulus }}</td> -->
+                          </tr>
+                        {% endfor %}
+                      </tbody>
+                      <tfoot>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
                 </div>
-            </div>
-        </section>      
-        <!-- /.content -->
-      </div>
-      <!-- /.card -->
-    </div><!-- /.container-fluid -->
-  </section>
-  <!-- /.content -->
+                <!-- /.card -->
+
+    <section class="content">
+      <div class="container-fluid">
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
 
 {% include '__partials/footer.html'%}
+
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+

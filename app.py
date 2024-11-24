@@ -1,27 +1,36 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session
 import logging
+from flask_migrate import Migrate
 from models import db
-from models.biodata_santri import Santri
-from models.biodata_santri import Lembaga
-from models.biodata_santri import Kampus
+from models.biodata_santri import Santri, Lembaga, Kampus, KampusMaster, Jurusan, ProgramStudi, Provinsi, Kota
 from models.auth import Auth
 from flask_bcrypt import Bcrypt
 from datetime import datetime
-import os
-os.urandom(24)
+# import os
+# os.urandom(24)
 # from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
+
+# import logging
+# logging.basicConfig(filename='app.log', level=logging.INFO)
 
 # Menambahkan SECRET_KEY
 app.config['SECRET_KEY'] = 'hs174hkuHAHLNNJSJJnnjnxd1234'  # Ganti dengan secret key yang aman
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///alumni_nuris.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/alumni_nuris'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/iman'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # db = SQLAlchemy(app)
 db.init_app(app)
+
+migrate = Migrate(app, db)
+
+# with app.app_context():
+#     db.create_all()  # Membuat tabel berdasarkan model
+#     print("Tabel berhasil dibuat.")
+
 
 @app.route("/")
 def home():
@@ -173,16 +182,6 @@ def add_santri():
             db.session.add(new_kampus)
             db.session.commit()
             app.logger.info(f"Data Santri dan Lembaga added successfully")
-
-            # insert data tabel lembaga
-            # santri_id = new_santri.id_santri
-
-            # new_lembaga = Lembaga(nama_lembaga-nama_lembaga, id_santri=santri_id)
-
-            # db.session.add(new_lembaga)
-            # db.session.commit
-
-            # app.logger.info("Data lembaga {nama_santri} berhasil diinput")
             
             flash('Data santri berhasil ditambahkan!', 'success')
             return redirect(url_for('add_santri'))
@@ -192,7 +191,78 @@ def add_santri():
             flash(f'Error: {str(e)}', 'danger')
             return redirect(url_for('add_santri'))
 
-    return render_template('ikmaris.html')  # Sesuaikan template Anda
+    return render_template('biodata.html')  # Sesuaikan template Anda
+
+@app.route('/add_data', methods=['POST'])
+def add_data():
+    try:
+        data = request.json
+
+        # Ambil data dari JSON
+        nama_kampus = data.get('nama_kampus')
+        nama_jurusan = data.get('nama_jurusan')
+        nama_program_studi = data.get('nama_program_studi')
+        nama_provinsi = data.get('nama_provinsi')
+        nama_kota = data.get('nama_kota')
+
+        if not all([nama_kampus, nama_jurusan, nama_program_studi, nama_provinsi, nama_kota]):
+            return jsonify({'error': 'Semua field harus diisi'}), 400
+
+
+        # Buat objek masing-masing model
+        provinsi = Provinsi(nama_provinsi=nama_provinsi)
+        db.session.add(provinsi)
+        db.session.flush()  # Dapatkan ID provinsi
+        app.logger.info(f"Inserted Provinsi with id: {provinsi.id_provinsi}")
+
+        kota = Kota(nama_kota=nama_kota, id_provinsi=provinsi.id_provinsi)
+        db.session.add(kota)
+        db.session.flush()  # Dapatkan ID kota
+        app.logger.info(f"Inserted Kota with id: {kota.id_kota}")
+
+        kampus = KampusMaster(
+            nama_kampus=nama_kampus,
+            alamat_kampus=None,
+            id_provinsi=provinsi.id_provinsi,
+            id_kota=kota.id_kota
+            )
+        db.session.add(kampus)
+        # db.session.commit()  # Commit terlebih dahulu untuk kampus
+        db.session.flush()  # Dapatkan ID kampus
+        app.logger.info(f"Inserted Kampus with id: {kampus.id_kampus}")
+
+        # app.logger.error(f"Failed to insert jurusan: {e}")
+        # app.logger.info(f"Inserting into tb_jurusan with id_kampus: {kampus.id_kampus}")
+
+
+        jurusan = Jurusan(nama_jurusan=nama_jurusan, id_kampus=kampus.id_kampus)
+        db.session.add(jurusan)
+        db.session.flush()  # Dapatkan ID jurusan
+        app.logger.info(f"Inserted Jurusan with id: {jurusan.id_jurusan}")
+
+        program_studi = ProgramStudi(nama_program_studi=nama_program_studi, id_jurusan=jurusan.id_jurusan)
+        db.session.add(program_studi)
+        app.logger.info(f"Inserted ProgramStudi with id: {program_studi.id_program_studi}")
+
+        # Commit perubahan ke database
+        db.session.commit()
+
+        app.logger.info(f"Received data: {request.json}")
+
+        # if not all([nama_kampus, nama_jurusan, nama_program_studi, nama_provinsi, nama_kota]):
+        #     return jsonify({'error': 'Semua field harus diisi'}), 400
+
+        # # Cek duplikasi kampus
+        # existing_kampus = KampusMaster.query.filter_by(nama_kampus=nama_kampus).first()
+        # if existing_kampus:
+        #     return jsonify({'error': 'Nama kampus sudah ada'}), 400
+
+
+        return jsonify({'message': 'Data berhasil ditambahkan'}), 201
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
 
 
 @app.route("/kopimanis")
@@ -205,9 +275,9 @@ def santri():
 def tambah_user():
     return render_template('tambah_user.html', menu='previllege', submenu='tambah_user')
 
-@app.route("/hak_akses")
+@app.route("/add_biodata")
 def hak_akses(): 
-    return render_template('hak_akses.html', menu='previllege', submenu='hak_akses')
+    return render_template('biodata.html', menu='previllege', submenu='add_biodata')
 
 # @app.route("/kopimanis")
 # def kopimanis():
@@ -218,7 +288,7 @@ def ikmaris():
     return render_template('ikmaris.html', menu='komunitas', submenu='ikmaris')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
 # if __name__ == "__main__":
 #     app.run(host="0.0.0.0", port=5000)    

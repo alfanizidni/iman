@@ -1,0 +1,156 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/dist/js/adminlte.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/dist/css/adminlte.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/jquery/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/icheck-bootstrap/icheck-bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/icheck-bootstrap/icheck-bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/jquery/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/dist/css/adminlte.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:24] "[36mGET /static/dist/js/adminlte.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:29] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:29] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:29] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:29] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:07:29] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\models\\biodata_santri.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\models\\biodata_santri.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\models\\biodata_santri.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\models\\biodata_santri.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/css/adminlte.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/icheck-bootstrap/icheck-bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/daterangepicker/daterangepicker.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/jqvmap/jqvmap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/summernote/summernote-bs4.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/select2/css/select2.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bs-stepper/css/bs-stepper.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/dropzone/min/dropzone.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/img/user8-128x128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/img/user1-128x128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/img/user2-160x160.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/img/user3-128x128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/jquery/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/jquery-ui/jquery-ui.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/chart.js/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/sparklines/sparkline.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/jqvmap/jquery.vmap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/jqvmap/maps/jquery.vmap.usa.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/img/AdminLTELogo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/jquery-knob/jquery.knob.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/daterangepicker/daterangepicker.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/moment/moment.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/summernote/summernote-bs4.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/js/demo.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/js/adminlte.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/js/pages/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/select2/js/select2.full.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/inputmask/jquery.inputmask.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bootstrap-switch/js/bootstrap-switch.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/bs-stepper/js/bs-stepper.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/plugins/dropzone/min/dropzone.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:53] "[36mGET /static/dist/js/adminlte.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "[32mPOST /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "[36mGET /static/plugins/icheck-bootstrap/icheck-bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "[36mGET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "[36mGET /static/dist/css/adminlte.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "[36mGET /static/plugins/jquery/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "[36mGET /static/dist/js/adminlte.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:15:58] "[36mGET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/jqvmap/jqvmap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/icheck-bootstrap/icheck-bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/css/adminlte.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/daterangepicker/daterangepicker.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/summernote/summernote-bs4.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/select2/css/select2.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bs-stepper/css/bs-stepper.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/dropzone/min/dropzone.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/img/user1-128x128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/img/user8-128x128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/img/user3-128x128.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/jquery/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/img/user2-160x160.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/jquery-ui/jquery-ui.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/chart.js/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/img/AdminLTELogo.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/sparklines/sparkline.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/jqvmap/jquery.vmap.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/jqvmap/maps/jquery.vmap.usa.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/jquery-knob/jquery.knob.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/moment/moment.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/daterangepicker/daterangepicker.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/summernote/summernote-bs4.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/js/adminlte.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/js/demo.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/js/pages/dashboard.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/select2/js/select2.full.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/inputmask/jquery.inputmask.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bootstrap-switch/js/bootstrap-switch.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/bs-stepper/js/bs-stepper.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/plugins/dropzone/min/dropzone.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [24/Nov/2024 02:16:02] "[36mGET /static/dist/js/adminlte.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 139-017-244
+INFO:werkzeug: * Detected change in 'D:\\python\\project-flask\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
