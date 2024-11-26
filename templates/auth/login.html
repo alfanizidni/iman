@@ -35,7 +35,7 @@
           {% endif %}
         {% endwith %}
 
-      <form action="{{ url_for('login') }}" method="post">
+      <form action="{{ url_for('auth.login') }}" method="post">
         <div class="input-group mb-3">
           <input id="identifier" name="identifier" class="form-control" placeholder="Email" required>
           <div class="input-group-append">
@@ -84,7 +84,7 @@
         <a href="forgot-password.html">I forgot my password</a>
       </p> -->
       <p class="mb-0">
-        <a href="/register" class="text-center">Register a new membership</a>
+        <a href="{{ url_for('auth.register') }}" class="text-center">Register a new membership</a>
       </p>
     </div>
     <!-- /.login-card-body -->

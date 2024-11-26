@@ -211,10 +211,8 @@
         </div>
         <div class="info">
             <!-- Menampilkan nama pengguna yang sedang login -->
-          {% if session.get('username') %}
-            <a href="#" class="d-block" id="username" style="font-size: 20px; color: #e7e7de;">{{ session.get('username') }}</a>
-            <!-- Logout Button -->
-            <!-- <a href="{{ url_for('logout') }}" class="d-block" id="logout.btn" style="display: none;">Logout</a> -->
+          {% if session.get('auth.username') %}
+            <a href="#" class="d-block" id="username" style="font-size: 20px; color: #e7e7de;">{{ session.get('auth.username') }}</a>
           {% else %}
             <a href="#" class="d-block" style="font-size: 20px; color: #e7e7de;">Guest</a>
           {% endif %}
@@ -253,13 +251,13 @@
               <li class="nav-item">
                 <a href="/tambah_user" class="nav-link {% if submenu=='tambah_user' %} active {% endif %}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah User</p>
+                  <p>Add User</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/add_biodata" class="nav-link {% if submenu=='add_biodata' %} active {% endif %}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Biodata</p>
+                  <p>Add Biodata</p>
                 </a>
               </li>
             </ul>
@@ -290,13 +288,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <!-- Mengubah menu Logout menjadi button
-            <form action="{{ url_for('logout') }}" method="POST" id="logout-form" style="display: none;">
-                <button type="submit" class="nav-link btn btn-danger text-white" style="font-size: 16px; padding: 6px 12px;" onclick="confirmLogout()">
-                    <i class="nav-icon fas fa-sign-out-alt"></i> Logout
-                </button>
-            </form> -->
-            <form action="{{ url_for('logout') }}" method="POST" id="logout-form" style="display: none;">
+            <form action="{{ url_for('auth.logout') }}" method="POST" id="logout-form" style="display: none;">
               <button type="submit" class="btn btn-lg btn-danger text-white">
                 <i class="nav-icon fas fa-sign-out-alt"></i> Logout
               </button>

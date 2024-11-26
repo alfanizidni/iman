@@ -48,13 +48,24 @@ class KampusMaster(db.Model):
     id_provinsi = db.Column(db.Integer, db.ForeignKey('tb_provinsi.id_provinsi'), nullable=False)
     id_kota = db.Column(db.Integer, db.ForeignKey('tb_kota.id_kota'), nullable=False)
     provinsi = db.relationship('Provinsi', backref='kampus', lazy=True)
+    kota = db.relationship('Kota', backref='kampus', lazy=True)
+    kampus_jurusan = db.relationship('KampusJurusan', backref='kampus', lazy=True)
+
 
 class Jurusan(db.Model):
     __tablename__ = 'tb_jurusan'
     id_jurusan = db.Column(db.Integer, primary_key=True)
     nama_jurusan = db.Column(db.String(100), nullable=False)
-    id_kampus = db.Column(db.Integer, db.ForeignKey('tb_mstkampus.id_kampus'), nullable=False)
+    kampus_jurusan = db.relationship('KampusJurusan', backref='jurusan', lazy=True)
     program_studi = db.relationship('ProgramStudi', backref='jurusan', lazy=True)
+
+
+class KampusJurusan(db.Model):
+    __tablename__ = 'tb_kampus_jurusan'
+    id = db.Column(db.Integer, primary_key=True)
+    id_kampus = db.Column(db.Integer, db.ForeignKey('tb_mstkampus.id_kampus'), nullable=False)
+    id_jurusan = db.Column(db.Integer, db.ForeignKey('tb_jurusan.id_jurusan'), nullable=False)
+
 
 class ProgramStudi(db.Model):
     __tablename__ = 'tb_program_studi'
@@ -62,14 +73,17 @@ class ProgramStudi(db.Model):
     nama_program_studi = db.Column(db.String(100), nullable=False)
     id_jurusan = db.Column(db.Integer, db.ForeignKey('tb_jurusan.id_jurusan'), nullable=False)
 
+
 class Provinsi(db.Model):
     __tablename__ = 'tb_provinsi'
     id_provinsi = db.Column(db.Integer, primary_key=True)
     nama_provinsi = db.Column(db.String(100), nullable=False)
     kota = db.relationship('Kota', backref='provinsi', lazy=True)
 
+
 class Kota(db.Model):
     __tablename__ = 'tb_kota'
     id_kota = db.Column(db.Integer, primary_key=True)
     nama_kota = db.Column(db.String(100), nullable=False)
-    id_provinsi = db.Column(db.Integer, db.ForeignKey('tb_provinsi.id_provinsi'), nullable=False)    
+    id_provinsi = db.Column(db.Integer, db.ForeignKey('tb_provinsi.id_provinsi'), nullable=False)
+
