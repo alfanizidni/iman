@@ -2,18 +2,11 @@ from flask import Flask, Blueprint, render_template, request, redirect, url_for,
 from models.auth import Auth
 from flask_bcrypt import Bcrypt
 from models import db
-
+from flask_login import login_user, logout_user, login_required
 
 auth_bp = Blueprint('auth', __name__)
 bcrypt = Bcrypt()
 
-# @auth_bp.route("/")
-# def home():
-#     return redirect(url_for('auth.login'))
-
-@auth_bp.route("/index")
-def index():
-    return render_template('index.html')
 
 @auth_bp.route("/login", methods=["GET", "POST"])
 def login():
@@ -21,20 +14,16 @@ def login():
         # print(request.form)
         identifier = request.form.get("identifier")
         password = request.form.get("password")
-
-        # cek input
-        # print(f"Identifier: {identifier}")
-        # print(f"Password: {password}")
         
         # Cek apakah user dengan email tersebut ada di database
         user = Auth.query.filter((Auth.email == identifier) | (Auth.nama == identifier)).first()
 
         # Jika user ada dan password cocok, redirect ke halaman dashboard
         if user and bcrypt.check_password_hash(user.password, password):
-
-            session['user_id'] = user.id_user
-            session['username'] = user.nama
-            return redirect(url_for('auth.index'))
+            login_user(user)
+            # session['auth.user_id'] = user.id_user
+            # session['auth.username'] = user.nama
+            return redirect(url_for('home'))
         else:
             # Jika login gagal, tampilkan pesan error
             flash("Nama, Email atau password salah", "danger")
@@ -43,11 +32,12 @@ def login():
     return render_template('auth/login.html')
 
 @auth_bp.route('/logout', methods=['POST'])
+@login_required
 def logout():
-    session.pop('username', None)  # Menghapus sesi username
+    logout_user()  # Logout menggunakan Flask-Login
+    session.clear()  # Menghapus semua data dari session
     flash('Anda telah logout', 'info')
     return redirect(url_for('auth.login'))  # Arahkan kembali ke halaman login
-
 
 @auth_bp.route("/register", methods=["GET", "POST"])
 def register():

@@ -158,9 +158,10 @@
                                     <div class="col-md-6">  
                                       <div class="form-group">
                                         <label for="nama_kampus">Nama Kampus</label>
-                                        <input type="text" id="nama_kampus" name="nama_kampus" class="form-control">
+                                        <input type="text" id="nama_kampus" name="nama_kampus" class="form-control" onkeyup="searchKampus()" placeholder="Ketik Nama Kampus ....">
+                                        <ul id="kampus_list" style="list-style-type:none; padding: 0;"></ul>
                                       </div>  
-                                    </div>
+                                    </div>                                       
                                     <div class="col-md-6">                    
                                         <!-- <div class="card-body"> -->
                                           <div class="form-group">
@@ -230,17 +231,11 @@
                                       <div class="col-md-6">                     
                                         <div class="form-group">
                                           <label>Tahun Masuk</label>
-                                            <input type="date" id="tahun_masuk_kampus" name="tahun_masuk_kampus" class="form-control" />
-                                            <!-- <div class="input-group date" id="reservationdate2" data-target-input="nearest">
-                                                <input type="date" id="tahun_masuk" name="tahun_masuk" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div> -->
+                                            <input type="date" id="tahun_masuk_kampus" name="tahun_masuk_kampus" class="form-control" />                                         
                                         </div>   
-                                    </div>            
-                                  </div>
-                                </div>    
+                                      </div>            
+                                    </div>
+                                  </div>    
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Simpan Data" class="btn btn-success float-left">
@@ -259,5 +254,9 @@
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+
+
+
 
 {% include '__partials/footer.html'%}

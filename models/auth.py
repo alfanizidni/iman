@@ -1,7 +1,8 @@
 from . import db # import dari __init__.py
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import UserMixin
 
-class Auth(db.Model):
+class Auth(db.Model, UserMixin):
     __tablename__ = 'tb_user'
     id_user = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100), unique=True, nullable=False)
@@ -14,4 +15,7 @@ class Auth(db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+    # Metode untuk Flask-Login
+    def get_id(self):
+        return str(self.id_user)  # Mengembalikan ID sebagai string
 

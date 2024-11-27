@@ -4,9 +4,14 @@ from datetime import datetime
 from models import db
 import logging
 
-kampus_routes = Blueprint('kampus', __name__)
+kampus_routes = Blueprint('kampus', __name__, template_folder='templates')
 
 logger = logging.getLogger('kampus_routes')
+
+# @kampus_routes.route("/add_biodata")
+# # @login_required
+# def hak_akses(): 
+#     return render_template('biodata.html', menu='previllege', submenu='add_biodata')
 
 @kampus_routes.route('/add_santri', methods=['GET', 'POST'])
 def add_santri():
@@ -88,11 +93,11 @@ def add_santri():
             logger.info(f"Data Santri dan Lembaga added successfully")
             
             flash('Data santri berhasil ditambahkan!', 'success')
-            return redirect(url_for('add_santri'))
+            return redirect(url_for('kampus.add_santri'))
         except Exception as e:
             db.session.rollback()
             logger.error(f"Error while adding santri: {str(e)}")
             flash(f'Error: {str(e)}', 'danger')
             return redirect(url_for('kampus.add_santri'))
     
-    return render_template('biodata.html')  # Sesuaikan template Anda
+    return render_template('biodata.html',menu='previllege', submenu='add_santri')  # Sesuaikan template Anda

@@ -218,5 +218,67 @@
   // DropzoneJS Demo Code End
 </script>
 
+<script>
+  function searchKampus() {
+      const query = document.getElementById('nama_kampus').value;
+      const kampusList = document.getElementById('kampus_list');
+
+      if (query.length > 2) {  // Batasi pencarian setelah 3 karakter
+          fetch(`/kampusMst/search?query=${query}`)
+              .then(response => response.json())
+              .then(data => {
+                  kampusList.innerHTML = '';  // Kosongkan daftar sebelumnya
+                  data.forEach(kampus => {
+                      const li = document.createElement('li');
+                      li.textContent = kampus.nama_kampus;
+                      li.classList.add('kampus-item'); // Menambahkan kelas untuk styling
+
+                      li.onclick = () => {
+                          document.getElementById('nama_kampus').value = kampus.nama_kampus;
+                          kampusList.innerHTML = '';  // Bersihkan daftar setelah dipilih
+                      };
+
+                      li.onmouseover = () => {
+                          li.classList.add('active'); // Menambahkan efek hover
+                      };
+
+                      li.onmouseout = () => {
+                          li.classList.remove('active'); // Menghapus efek hover saat mouse keluar
+                      };
+
+                      kampusList.appendChild(li);
+                  });
+              })
+              .catch(error => console.error('Error fetching kampus:', error));
+      } else {
+          kampusList.innerHTML = '';  // Kosongkan daftar jika query terlalu pendek
+      }
+  }
+</script>
+
+<style>
+  #kampus_list {
+      max-height: 200px; /* Membatasi tinggi daftar */
+      overflow-y: auto; /* Membuat daftar scrollable jika terlalu panjang */
+      border: 1px solid #ccc;
+      padding: 0;
+  }
+
+  .kampus-item {
+      padding: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .kampus-item:hover {
+      background-color: #f0f0f0; /* Efek hover untuk semua item */
+  }
+
+  .kampus-item.active {
+      background-color: #d3f4e6; /* Warna latar belakang saat item dipilih */
+      color: #007bff; /* Mengubah warna teks jika item aktif */
+  }
+</style>
+
 </body>
 </html>
